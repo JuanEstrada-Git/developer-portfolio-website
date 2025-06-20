@@ -46,7 +46,6 @@ function Header() {
                             className="nav-links"
                             style={{
                                 display: "flex",
-                                gap: "10px",
                                 listStyle: "none",
                                 margin: 0,
                                 padding: 0,
@@ -54,7 +53,7 @@ function Header() {
                             }}
                         >
                             {navLinks.map((link, i) => (
-                                <li key={i}>
+                                <li key={i} style={{ marginRight: i !== navLinks.length - 1 ? 14 : 0 }}>
                                     {link.href ? (
                                         <a
                                             href={link.href}
@@ -68,7 +67,8 @@ function Header() {
                                                 textDecoration: "none",
                                                 fontWeight: 500,
                                                 border: "1px solid #464655",
-                                                transition: "background 0.18s, color 0.18s"
+                                                transition: "background 0.18s, color 0.18s",
+                                                margin: 0,
                                             }}
                                         >
                                             {link.label}
@@ -85,7 +85,8 @@ function Header() {
                                                 fontWeight: 500,
                                                 border: "1px solid #464655",
                                                 cursor: "pointer",
-                                                transition: "background 0.18s, color 0.18s"
+                                                transition: "background 0.18s, color 0.18s",
+                                                margin: 0,
                                             }}
                                             onClick={link.onClick}
                                         >
@@ -144,17 +145,54 @@ function Header() {
                             className="close-mobile-nav"
                             onClick={() => setMobileNavOpen(false)}
                             aria-label="Close navigation"
+                            style={{
+                                background: "none",
+                                border: "none",
+                                color: "#fff",
+                                fontSize: "2.1rem",
+                                position: "absolute",
+                                top: 18,
+                                right: 24,
+                                cursor: "pointer",
+                                zIndex: 1002,
+                                padding: 0,
+                            }}
                         >
                             ×
                         </button>
-                        <ul className="mobile-nav-links">
+                        <ul className="mobile-nav-links" style={{
+                            listStyle: "none",
+                            margin: "56px 0 0 0",
+                            padding: "0 24px 0 0",
+                            width: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-end",
+                        }}>
                             {navLinks.map((link, i) => (
-                                <li key={i}>
+                                <li key={i} style={{ marginBottom: 16 }}>
                                     {link.href ? (
                                         <a
                                             href={link.href}
                                             className="nav-pill"
                                             onClick={() => handleNavClick(link)}
+                                            style={{
+                                                background: "#23232a",
+                                                border: "1px solid #464655",
+                                                borderRadius: "21px",
+                                                padding: "13px 28px",
+                                                color: "#fff",
+                                                fontWeight: 500,
+                                                fontSize: "1.13rem",
+                                                textAlign: "right",
+                                                width: "auto",
+                                                minWidth: 180,
+                                                transition: "background 0.17s, color 0.17s",
+                                                cursor: "pointer",
+                                                boxShadow: "0 3px 12px #0002",
+                                                textDecoration: "none",
+                                                display: "block",
+                                            }}
                                         >
                                             {link.label}
                                         </a>
@@ -162,6 +200,22 @@ function Header() {
                                         <button
                                             className="nav-pill"
                                             onClick={() => handleNavClick(link)}
+                                            style={{
+                                                background: "#23232a",
+                                                border: "1px solid #464655",
+                                                borderRadius: "21px",
+                                                padding: "13px 28px",
+                                                color: "#fff",
+                                                fontWeight: 500,
+                                                fontSize: "1.13rem",
+                                                textAlign: "right",
+                                                minWidth: 180,
+                                                width: "auto",
+                                                transition: "background 0.17s, color 0.17s",
+                                                cursor: "pointer",
+                                                boxShadow: "0 3px 12px #0002",
+                                                margin: 0,
+                                            }}
                                         >
                                             {link.label}
                                         </button>
@@ -246,7 +300,13 @@ function Header() {
                 }
                 .nav-links {
                     display: flex;
-                    gap: 10px;
+                }
+                .nav-pill:active,
+                .nav-pill:focus,
+                .nav-pill:hover {
+                    background: #363643 !important;
+                    color: #ffd66b !important;
+                    border-color: #ffd66b !important;
                 }
                 .mobile-nav-toggle {
                     display: none;
@@ -284,12 +344,12 @@ function Header() {
                         background: #18181e;
                         box-shadow: -8px 0 32px #0004;
                         z-index: 1001;
-                        padding-top: 46px;
+                        padding-top: 0;
                         transform: translateX(120%);
                         transition: transform 0.35s cubic-bezier(.82,.13,.37,1.12);
                         display: flex;
                         flex-direction: column;
-                        align-items: flex-end;
+                        align-items: flex-start;
                     }
                     .mobile-nav-drawer.open {
                         transform: translateX(0);
@@ -300,43 +360,11 @@ function Header() {
                         color: #fff;
                         font-size: 2.1rem;
                         position: absolute;
-                        top: 12px;
-                        right: 22px;
+                        top: 18px;
+                        right: 24px;
                         cursor: pointer;
                         z-index: 1002;
-                    }
-                    .mobile-nav-links {
-                        list-style: none;
-                        margin: 0;
-                        padding: 0 20px 0 0;
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 22px;
-                        align-items: flex-end;
-                    }
-                    .nav-pill {
-                        background: #23232a;
-                        border: 1px solid #464655;
-                        border-radius: 21px;
-                        padding: 11px 26px;
-                        color: #fff;
-                        font-weight: 500;
-                        font-size: 1.09rem;
-                        margin-bottom: 0;
-                        text-align: right;
-                        width: auto;
-                        transition: background 0.17s, color 0.17s;
-                        cursor: pointer;
-                        box-shadow: 0 3px 12px #0002;
-                        text-decoration: none;
-                    }
-                    .nav-pill:active,
-                    .nav-pill:focus,
-                    .nav-pill:hover {
-                        background: #2a2a36;
-                        color: #ffd66b;
-                        border-color: #ffd66b;
+                        padding: 0;
                     }
                 }
                 @media (max-width: 440px) {
