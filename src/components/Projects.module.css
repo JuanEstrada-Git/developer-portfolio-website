@@ -1,0 +1,141 @@
+.projectsSection {
+    background: #23252b;
+        color: #ffda79;
+        padding: 3rem 2rem;
+        margin: 2rem auto;
+        border-radius: 2rem;
+        max-width: 900px;
+        /* Slightly wider for modern screens */
+        box-shadow: 0 4px 40px #ffda7950, 0 0 0 4px #23252b;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+}
+
+.projectsTitle {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 24px #ffda79a0;
+}
+
+.techStackGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.techCard {
+    background: #1a1c23;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 24px #ffda7940;
+    padding: 1.5rem 1rem;
+    min-width: 200px;
+    max-width: 240px;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.techCard:hover,
+.techCard:focus-within {
+    box-shadow: 0 6px 32px #ffda7970, 0 0 8px #ffda7955;
+}
+
+.techLogoBtn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.15s;
+}
+
+.techLogoBtn:active {
+    transform: scale(0.97);
+}
+
+.techLogo {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 0.4rem;
+    border-radius: 50%;
+    background: #23252b;
+    box-shadow: 0 2px 16px #ffda7935;
+    border: 2px solid #ffda79;
+}
+
+.techName {
+    font-size: 1.15rem;
+    color: #ffda79;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.projectsList {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    animation: fadeIn 0.5s;
+}
+
+.projectCard {
+    background: #181a20;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    text-align: left;
+    box-shadow: 0 2px 16px #ffda7925;
+}
+
+.projectTitle {
+    font-size: 1.25rem;
+    color: #ffda79;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.projectDesc {
+    color: #fff7d0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.projectBtn {
+    background: #ffda79;
+    color: #23252b;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #ffda7935;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+
+.projectBtn:hover {
+    background: #fffbe6;
+    color: #23252b;
+    box-shadow: 0 6px 18px #ffda7970;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,67 @@
+.hero {
+    text-align: center;
+    margin-top: 0 !important;
+        /* Nuke all top margin */
+    padding-top: 0.5rem;
+        /* Or less, as needed */
+    padding: 0.5rem 0 1rem 0;
+    /* LESS top and bottom padding */
+    background: #181a20;
+}
+
+.heroContent {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1.2rem 0 0.7rem 0;
+    /* less vertical space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroTitle {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+    /* slightly less */
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.heroSubtitle {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 1.3rem;
+    color: #efefef;
+    font-weight: 400;
+}
+
+.ctaBtn {
+    background: #ffda79;
+    color: #23252b;
+    font-weight: bold;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1.1rem;
+    /* slightly less */
+    box-shadow: 0 2px 8px #00000030;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.ctaBtn:hover {
+    background: #fff7d0;
+    box-shadow: 0 4px 16px #ffda7970;
+}
+
+.heroImg {
+    width: 180px;
+    border-radius: 100%;
+    margin-top: 1.8rem;
+    /* less space under button */
+    border: 5px solid #ffda79;
+    box-shadow: 0 2px 24px #ffda7940;
+}
