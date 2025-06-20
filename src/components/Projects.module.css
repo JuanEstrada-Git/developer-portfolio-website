@@ -106,7 +106,8 @@
 .projectDesc {
     color: #fff7d0;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    /* Increase space between desc and button */
 }
 
 .projectBtn {
@@ -120,6 +121,10 @@
     text-decoration: none;
     box-shadow: 0 2px 8px #ffda7935;
     transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    margin-top: 0;
+    /* Ensure no margin here so margin-bottom from desc is dominant */
+    display: inline-block;
+    /* For safe vertical stacking, if not already */
 }
 
 .projectBtn:hover {

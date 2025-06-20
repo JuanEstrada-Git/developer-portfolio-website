@@ -185,6 +185,7 @@ section {
 .project-desc {
   color: var(--muted);
   margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .project-btn {
@@ -195,7 +196,7 @@ section {
   border-radius: 999px;
   box-shadow: 0 2px 8px #0002;
   text-decoration: none;
-  margin-top: 0.7rem;
+  margin-top: 16px;
   transition: background 0.2s, color 0.2s;
 }
 

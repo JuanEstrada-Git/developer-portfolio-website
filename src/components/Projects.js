@@ -8,9 +8,9 @@ const techStacks = [
         logo: "/assets/react-logo.png",
         projects: [
             {
-                title: "React Projects",
-                description: "React proejcts I have created.",
-                link: "https://github.com/yourusername/smart-home-dashboard"
+                title: "This Website!",
+                description: "This portfolio website was built using React.",
+                link: "https://developer-portfolio-websit-git-ddce47-juanestrada-gits-projects.vercel.app/"
             },
             // Add more React projects here
         ]

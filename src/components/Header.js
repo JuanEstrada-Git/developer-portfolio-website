@@ -275,7 +275,7 @@ function Header() {
                             ×
                         </button>
                         <iframe
-                            src="/Juan_Estrada_CV.pdf"
+                            src="/Juan Estrada_CV_2025_Product-Program-Project Manager.pdf"
                             title="Juan Estrada CV"
                             style={{
                                 width: "80vw",
