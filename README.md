@@ -52,7 +52,7 @@ npm run build
 ---
 
 ## 🌐 Live Demo
-Coming soon: [Add your deployed site URL here]
+(https://developer-portfolio-website-bhuz.vercel.app/)
 
 ---
 
