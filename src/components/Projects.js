@@ -44,7 +44,19 @@ const techStacks = [
         logo: "/assets/vue-logo.png",
         projects: [
             {
-                title: "VueJS Projects",
+                title: "Smart Home Management App",
+                description: "Smart Home Management App I created using VueJS",
+                link: "https://smart-home-dashboard-real-vue.vercel.app/"
+            },
+            // Add more Node projects here
+        ]
+    },
+    {
+        name: "Flask Projects",
+        logo: "/assets/flask-fast-api.jpg",
+        projects: [
+            {
+                title: "Flask & FastAPI Projects",
                 description: "Ruby projects I have created",
                 link: "https://github.com/yourusername/node-smart-home-api"
             },
